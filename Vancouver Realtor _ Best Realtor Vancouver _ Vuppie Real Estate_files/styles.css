@@ -1,0 +1,28 @@
+/*
+Theme Name: pacific
+Description: Pacific
+Version: 1
+Author: Ubertor
+Variation: Century21, MacDonald, Remax, Royal_LePage, Sothebys, New_Coast
+Host:
+*/
+
+/* Main colors ---------------
+#1a2530  Dark base color
+#27ae60  Green
+#d4d4d4 Property detail light color
+#4a4a4a Property detail dark border
+#7c7c7c Property detail middle border
+#eae9e5 light background color
+------------------------------------ */
+
+@import url(css/app.min.css);
+
+.item-badge,
+.uber-badge{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    padding: 5px 10px;
+    display:none;
+}

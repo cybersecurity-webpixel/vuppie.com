@@ -1,0 +1,136 @@
+@import url('/_newcms_assets/css/modules/kuni_widescreen/styles.kuni_widescreen.css'');
+/* modular css */
+
+
+
+
+
+
+
+
+/* Global VOW Styles */
+.vow-nav{
+  text-align:right;
+  padding-right:30px;
+  padding-top:10px;
+}
+
+.g-recaptcha{
+  display:inline-block;
+}
+
+/* AFCs */
+#details .listing_provided_by_top{
+  text-align:center;
+}
+body.has_afc #photos img, body.has_afc #listing_detail_img img{
+  width:100%;
+}
+
+/* Info Window */
+#properties #properties_map .property .listing_provided_by{
+  text-align:center;
+}
+
+/* Lightbox */
+#bg_fade{
+  background: #ccc;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: block;
+  opacity:0;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+.old-modal{
+  position: fixed;
+  display: none;
+  background: #fff;
+  color: #000;
+  width: 330px;
+  height: 430px;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -200px;
+  z-index: 99999;
+  padding: 10px 20px 10px 20px;
+}
+.old-modal .inner-modal{
+  overflow:scroll;
+  width: 300px;
+  height: 300px;
+  padding-top:10px;
+  padding-bottom:10px;
+}
+#content_body .old-modal h2{
+  color:#000;
+  font-weight:bold;
+  border-top:none !important;
+}
+#content_body .old-modal p{
+  display:block !important;
+}
+.old-modal .modal-nav{
+  width:100%;
+  padding-top: 20px;
+}
+.old-modal .modal-nav button{
+  padding:10px 20px;
+  font-size:16px;
+}
+
+/*****************************************************/
+/*          Third Level Nav                   */
+/*****************************************************/
+#ubertor #menu_inner ul ul ul {
+	display: none;
+	left: 179px;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
+
+#ubertor #menu_inner ul ul  li:hover > ul {
+	display: block;
+}
+
+#ubertor #menu_inner ul ul  li:hover ul li {
+	position: relative;
+	border-left: 1px solid #2e2e2e;
+	height: auto;
+}
+
+html > body #menu_inner ul li {
+	position: relative;
+
+}
+
+#menu_inner li li.sel a, #menu_inner li:hover, #menu_inner li.sel_over, #menu_inner li.over
+
+#menu_outer .sel li a {
+background:none repeat scroll 0 0 #111111;
+}
+
+#main_menu.nav li { position: relative; }
+
+#uberlivechat iframe{ background:none; }
+
+.disclaimer{ clear: both; }
+span.copyright{ display:block; }
+#content_body p.listing-provided-by,
+#content_body p.board_copyright,
+#content_body p.board_disclaimer{ display:block; }
+.data-last-updated-at{ text-align:right; }
+p.mls-logos{background-color:#fff;}
+p.mls-logos img.reciprocity_r_logo{margin-right:76px;}
+p.mls-logos img{
+  height: 66px;
+  white-space: nowrap;
+  padding-right: 18px;
+  display: inline-block;
+}
+.wrapper-listing-provided-by{display:inline-block;padding-bottom:10px;}
+.description .board_logo, .alisting-detail .reciprocity_logo, .reciprocity_logo{max-width: 150px;background:white;margin:4px;}

@@ -1,0 +1,12 @@
+/* front_v2.js */
+jQuery.noConflict();Number.prototype.formatMoney=function(c,d,t){var n=this,c=isNaN(c=Math.abs(c))?2:c,d=d==undefined?".":d,t=t==undefined?",":t,s=n<0?"-":"",i=parseInt(n=Math.abs(+n||0).toFixed(c))+"",j=(j=i.length)>3?j%3:0;return s+(j?i.substr(0,j)+t:"")+i.substr(j).replace(/(\d{3})(?=\d)/g,"$1"+t)+(c?d+Math.abs(n-i).toFixed(c).slice(2):"")};Number.prototype.toRad=function(){return this*Math.PI/180};Array.prototype.sum=function(){return this.reduce(function(a,b){return a+b})};
+
+jQuery.extend({getQueryParameters:function(str){return(str||document.location.search).replace(/(^\?)/,"").split("&").map(function(n){return n=n.split("="),this[n[0]]=n[1],this}.bind({}))[0]}});function toggleTabs(id){$("div.info").each(function(infodiv){infodiv.style.display="none"});var showdiv=$(id);if(showdiv){showdiv.style.display="";if(id=="map"){var googlemap=$("googlemap");map_url=googlemap.title;if(map_url!="loaded!"){googlemap.src=map_url;googlemap.title="loaded!"}}}$("#detail_menu li.sel").each(function(detail_menu_li){detail_menu_li.removeClassName("sel")});$("#detail_menu li."+id).each(function(selected_li){selected_li.addClassName("sel")})}function toggle_thumb(elt){container=document.getElementById("photos");if(!container){alert("no container");return}image=container.getElementsByTagName("img")[0];link=image.parentNode;image.src=elt.getAttribute("source");link.href=elt.getAttribute("reference")}function getElementFromEvent(evt){evt=(evt)?evt:((window.event)?window.event:null);var elem;if(evt){elem=(evt.target)?evt.target:((evt.srcElement)?evt.srcElement:null)}return elem}
+
+function r_sort_listings(obj){
+	var search_query=jQuery.getQueryParameters()||{};search_query.order=obj.options[obj.selectedIndex].value;if(search_query.property_type){search_query.property_type=search_query.property_type.replace(/\+/g," ")}if(search_query.sub_area){search_query.sub_area=search_query.sub_area.replace(/\+/g," ")}jQuery.each(search_query,function(key,value){if(key==""||value==undefined){delete search_query[key]}});document.location.search="?"+jQuery.param(search_query)};
+
+
+jQuery(document).ready(function($){
+	jQuery('select[onchange="sort_listings(this);"]','body.has_afc').attr('onchange','r_sort_listings(this);');
+});
